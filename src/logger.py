@@ -1,6 +1,8 @@
 import logging 
 import os
 from datetime import datetime
+import sys
+from exception import CustomException 
 LOG_DIR=os.getcwd()
 print("current working directory:",LOG_DIR)
 LOG_FILE=f"log_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
@@ -13,5 +15,13 @@ logging.basicConfig(
     format='[%(asctime)s] %(levelname)s - %(message)s',
     level=logging.INFO,
 )
-if __name__=="__main__":
-    logging.info("Logging has been set up.")
+# if __name__=="__main__":
+#     try:
+#         a=10/0
+#     except Exception as e:
+#         logging.info("Division by zero error occurred.")
+#         raise CustomException(e,sys)
+    
+
+
+#     logging.info("Logging has been set up.")

@@ -1,5 +1,5 @@
 import sys
-
+import logging
 def error_message(error_detail: sys) -> str:
     """Generate a formatted error message with file name and line number.
 
@@ -29,4 +29,10 @@ class CustomException(Exception):
     def __str__(self) -> str:
         return self.message
     
-    
+# if __name__ == "__main__":
+#         try:
+#             a = 1/0
+#         except Exception as e:
+#             logging.info("Division by zero log occured")
+#             instance = CustomException(e, sys)
+#             raise instance
