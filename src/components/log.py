@@ -2,7 +2,7 @@ import logging
 import os
 from datetime import datetime
 import sys
-from exception import CustomException 
+# from excep import CustomException 
 LOG_DIR=os.getcwd()
 print("current working directory:",LOG_DIR)
 LOG_FILE=f"log_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
@@ -25,3 +25,8 @@ logging.basicConfig(
 
 
 #     logging.info("Logging has been set up.")
+
+class info:
+    def __init__(self, message):
+        self.message = message
+        print(self.message)
